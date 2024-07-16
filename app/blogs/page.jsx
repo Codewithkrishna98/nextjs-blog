@@ -3,7 +3,7 @@ import BlogPage from "../components/BlogPage"
    
 async function fetchBlogs(){
   try {
-      const apiResponse = await fetch("http://localhost:3000/api/get-blog",{
+      const apiResponse = await fetch(`${process.env.HOST_URL}/api/get-blog`,{
         method: "GET",
         cache: "no-store"
       })
