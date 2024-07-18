@@ -6,11 +6,12 @@ async function fetchBlogs(){
 
       const URL = process.env.HOST_URL
       const apiResponse = await fetch(`${URL}/api/get-blog`,{
-        method: "GET",
+        method: 'GET',
         cache: "no-store"
+
       })
       const result = await apiResponse.json()
-      return result?.data
+      return result.data
   } catch (error) {
     throw new Error(error)
   }
