@@ -3,7 +3,9 @@ import BlogPage from "../components/BlogPage"
    
 async function fetchBlogs(){
   try {
-      const apiResponse = await fetch(`${process.env.HOST_URL}/api/get-blog`,{
+
+      const URL = process.env.HOST_URL
+      const apiResponse = await fetch(`${URL}/api/get-blog`,{
         method: "GET",
         cache: "no-store"
       })
